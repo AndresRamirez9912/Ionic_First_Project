@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let component of components" [routerLink]="component.redirectTo" color="primary" detail="true">
+      <ion-icon [name]=component.icon slot="start" ></ion-icon> <!-- Add the american item at the beggining of the list-->
+      {{component.name}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
