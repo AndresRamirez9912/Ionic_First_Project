@@ -25,6 +25,11 @@ export class HomePage implements OnInit {
       name: 'Avatar' ,
       redirectTo: '/avatar',
     },
+    {
+      icon: "arrow-forward-circle-outline",
+      name: 'Buttons' ,
+      redirectTo: '/buttons',
+    },
   ]
 
   constructor() { }

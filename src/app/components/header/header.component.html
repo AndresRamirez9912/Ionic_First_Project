@@ -1,10 +1,17 @@
 <ion-header>
   <ion-toolbar>
+
     <ion-buttons slot="start"> <!-- Put the back buttons at the left side -->
       <ion-back-button [defaultHref]=back_addreess> </ion-back-button> <!-- Add the back button and if there are not any previous page send to the home page -->
     </ion-buttons>
+
     <ion-title class="ion-text-capitalize">
       {{title}}
     </ion-title>
+
+    <ion-avatar slot="end">
+      <img src="../../../assets/Doge.png" />
+    </ion-avatar>
+
   </ion-toolbar>
 </ion-header>
