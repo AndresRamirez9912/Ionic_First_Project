@@ -26,6 +26,22 @@ const routes: Routes = [
     path: 'buttons',
     loadChildren: () => import('./pages/buttons/buttons.module').then( m => m.ButtonsPageModule)
   },
+  {
+    path: 'cards',
+    loadChildren: () => import('./pages/cards/cards.module').then( m => m.CardsPageModule)
+  },
+  {
+    path: 'checbox',
+    loadChildren: () => import('./pages/checbox/checbox.module').then( m => m.ChecboxPageModule)
+  },
+  {
+    path: 'fab',
+    loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
+  },
+  {
+    path: 'grid',
+    loadChildren: () => import('./pages/grid/grid.module').then( m => m.GridPageModule)
+  },
 
 ];
 
