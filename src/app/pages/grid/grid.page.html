@@ -1,0 +1,61 @@
+<app-header title="Grid" back_addreess="home"></app-header>
+
+<ion-content>
+
+  <ion-grid>
+    <h3>2 Columns of 6 spaces</h3>
+    <ion-row>
+      <ion-col size="6">6</ion-col>
+      <ion-col size="6">6</ion-col>
+    </ion-row>
+
+    <h3>6 Columns of 2 spaces</h3>
+    <ion-row>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+    </ion-row>
+
+    <h3>12 Columns of 1 spaces</h3>
+    <ion-row>
+      <ion-col *ngFor="let col of [1,1,1,1,1,1,1,1,1,1,1,1]">1</ion-col>
+    </ion-row>
+
+    <h3>Cards Inside col 3</h3>
+    <ion-row>
+      <ion-col size="12" sizeSm="6" sizeMd="4" sizeLg="3" fixed>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Eiffel Tower</ion-card-title>
+            <ion-card-subtitle>Paris (I guess)</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-label>This is a the first Card inside a grid of 3 size and talks about the effel tower</ion-label>
+            <ion-img src="../../../assets/Eiffel_Tower.jpg"></ion-img>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" sizeSm="6" sizeMd="4" sizeLg="3" fixed>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Doge Meme</ion-card-title>
+            <ion-card-subtitle>I like this meme</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-label>Idk how this was create</ion-label>
+            <ion-img src="../../../assets/Doge.png"></ion-img>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
