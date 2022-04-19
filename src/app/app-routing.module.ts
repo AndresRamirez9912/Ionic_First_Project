@@ -42,6 +42,14 @@ const routes: Routes = [
     path: 'grid',
     loadChildren: () => import('./pages/grid/grid.module').then( m => m.GridPageModule)
   },
+  {
+    path: 'inifinite-scroll',
+    loadChildren: () => import('./pages/inifinite-scroll/inifinite-scroll.module').then( m => m.InifiniteScrollPageModule)
+  },
+  {
+    path: 'input',
+    loadChildren: () => import('./pages/input/input.module').then( m => m.InputPageModule)
+  },
 
 ];
 
