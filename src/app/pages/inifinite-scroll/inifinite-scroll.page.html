@@ -1,0 +1,15 @@
+<app-header title="Infinite-Scroll" back_addreess="home"></app-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item *ngFor="let element of showData;let i=index">
+      <ion-label>Item {{i+1}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!--  Normally the infinite list is showing at the end of the page -->
+  <ion-infinite-scroll threshold="50px" (ionInfinite)="loadData()">
+    <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
