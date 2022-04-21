@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" color="primary">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>List Reorder</ion-title>
+    <ion-button (click)="editClick()" slot="end" color="none">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+    <ion-list-header>
+      <h2>Reorder List with different elements</h2>
+    </ion-list-header>
+
+    <ion-reorder-group (ionItemReorder)="doReorder($event)" [disabled]=edit>
+      <ion-item> <!-- First Element -->
+        <ion-label>
+          Item 1
+        </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+      <ion-item> <!-- Second Element -->
+        <ion-label>
+          Item 2
+        </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+      <ion-item> <!-- Third Element -->
+        <ion-label>
+          Item 3
+        </ion-label>
+        <ion-reorder slot="end">
+          <ion-icon  name="add"></ion-icon> <!-- Change Icon-->
+        </ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+  <br>
+  <ion-list>
+    <ion-list-header>
+      <h2>Reorder an array based list</h2>
+    </ion-list-header>
+    <ion-reorder-group (ionItemReorder)="nameReorder($event)" [disabled]=edit> <!-- One tag of each list-->
+      <ion-item *ngFor="let character of characters">
+        <ion-label>
+          {{character}}
+        </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+
+</ion-content>

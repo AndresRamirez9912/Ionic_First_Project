@@ -1,3 +1,20 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-menu contentId="main" menuId="main-menu" side="start" type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Title</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item *ngFor="let element of [1,1,1,1,1,1,1,1,1,1];let i=index">
+          <ion-label>Item {{i+1}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

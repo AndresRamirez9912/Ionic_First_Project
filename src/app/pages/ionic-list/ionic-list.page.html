@@ -1,0 +1,160 @@
+<app-header title="Ionic list" back_addreess="home"></app-header>
+
+<ion-content id="list1">
+
+  <h3>Item Sliding</h3>
+  <ion-list>
+      <ion-item-sliding>
+
+       <ion-item-options color="primary" side="start">
+         <ion-item-option (click)="clickFavorite()">Favorite</ion-item-option>
+         <ion-item-option (click)="clickShare()">Share</ion-item-option>
+       </ion-item-options>
+
+       <ion-item>
+         <ion-label>Name</ion-label>
+       </ion-item>
+
+       <ion-item-options side="end">
+         <ion-item-option (click)="clickUnread()">Unread</ion-item-option>
+         <ion-item-option (click)="clickDelete()">Delete</ion-item-option>
+        </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <h2>Sliding Options</h2>
+    <ion-list id="list2">
+      <ion-item-sliding>
+        <ion-item-options side="start">
+          <ion-item-option color="danger" expandable> Delete </ion-item-option>
+        </ion-item-options>
+
+        <ion-item>
+          <ion-label>
+            <h2>Sliding With Expandable Option</h2>
+            <p>Expandable Options</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item-options side="end">
+          <ion-item-option color="tertiary" expandable>Archive </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+
+    <ion-list id="list3">
+      <ion-item-sliding id="item100">
+        <ion-item >
+          <ion-label>
+            <h2> Multi-line sliding item</h2>
+            <p>A new message in your network</p>
+            <p>Oceanic Next has joined your network</p>
+          </ion-label>
+          <ion-note slot="end">
+            10:45 AM
+          </ion-note>
+        </ion-item>
+
+        <ion-item-options side="start">
+          <ion-item-option>
+            <ion-icon slot="icon-only" name="heart"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+
+        <ion-item-options side="end">
+          <ion-item-option color="danger">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+          <ion-item-option>
+            <ion-icon slot="icon-only" name="star"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+  <ion-list id="list4">
+  <ion-item-sliding>
+    <ion-item>
+      <ion-label>
+        <h2>Sliding item with icon start options on end side</h2>
+        <p>Sliding Item, Icons Start</p>
+      </ion-label>
+    </ion-item>
+    <ion-item-options>
+      <ion-item-option color="primary">
+        <ion-icon slot="start" name="ellipsis-vertical"></ion-icon>
+        More
+      </ion-item-option>
+      <ion-item-option color="secondary">
+        <ion-icon slot="start" name="archive"></ion-icon>
+        Archive
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+  </ion-list>
+
+
+  <ion-list id="list5">
+  <ion-item-sliding>
+    <ion-item>
+      <ion-label>
+        <h2>Sliding item with icon top options on end side</h2>
+        <p>Sliding Item, Icons Top</p>
+      </ion-label>
+    </ion-item>
+    <ion-item-options>
+      <ion-item-option color="primary">
+        <ion-icon slot="top" name="ellipsis-vertical"></ion-icon>
+        More
+      </ion-item-option>
+      <ion-item-option color="secondary">
+        <ion-icon slot="top" name="archive"></ion-icon>
+        Archive
+      </ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
+  </ion-list>
+
+  <h3> List </h3>
+  <ion-list class="ion-padding" id="list6">
+    <ion-item *ngFor="let user of users |async">
+      <ion-label>
+        <h3>{{user.name}}}</h3>
+        <p>{{user.email}}}</p>
+      </ion-label>
+      <ion-label  class="ion-text-end text-small">
+        {{user.phone}}
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+
+  <h3>List with Sliding</h3>
+  <ion-list class="ion-padding" id="list7">
+    <ion-item-sliding *ngFor="let user of users |async">
+
+      <ion-item >
+        <ion-label>
+          <h3>{{user.name}}}</h3>
+          <p>{{user.email}}}</p>
+        </ion-label>
+        <ion-label  class="ion-text-end text-small">
+          {{user.phone}}
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option>
+          <ion-icon slot="icon-only" name="bandage-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+         <ion-item-option side="end" expandable>
+           <ion-icon slot="icon-only" name="balloon-outline" ></ion-icon>
+         </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

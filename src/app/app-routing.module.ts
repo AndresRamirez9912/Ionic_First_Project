@@ -50,6 +50,18 @@ const routes: Routes = [
     path: 'input',
     loadChildren: () => import('./pages/input/input.module').then( m => m.InputPageModule)
   },
+  {
+    path: 'ionic-list',
+    loadChildren: () => import('./pages/ionic-list/ionic-list.module').then( m => m.IonicListPageModule)
+  },
+  {
+    path: 'list-reorder',
+    loadChildren: () => import('./pages/list-reorder/list-reorder.module').then( m => m.ListReorderPageModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
+  },
 
 ];
 
