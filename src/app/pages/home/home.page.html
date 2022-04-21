@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-button (click)="activateMenu()" slot="start" color="none">
+      <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+    </ion-button>
     <ion-title>App de Andres</ion-title>
     <ion-title>home</ion-title>
   </ion-toolbar>
@@ -8,7 +11,7 @@
 <ion-content>
   <ion-list>
     <ion-item
-      *ngFor="let component of components"
+      *ngFor="let component of components | async"
       [routerLink]="component.redirectTo"
       color="primary"
       detail="true"

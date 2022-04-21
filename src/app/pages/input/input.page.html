@@ -1,6 +1,6 @@
 <app-header title="Inputs" back_addreess="home"></app-header>
 
-<ion-content>
+<ion-content class="ion-padding">
 
   <h3>Default Input</h3>
   <ion-input></ion-input>
@@ -43,4 +43,47 @@
     <ion-label position="stacked">Stacked Label</ion-label>
     <ion-input></ion-input>
   </ion-item>
+
+  <h3>Input inside Ilist</h3>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Normal Input</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label position="floating">Name:</ion-label>
+      <ion-input type="text" placeholder="Type name" [(ngModel)]="name"></ion-input> <!-- Get the data using a ngModel-->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password:</ion-label>
+      <ion-input type="password" placeholder="Type password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <h3>Form</h3>
+  <form #form="ngForm" (submit)="onSubmit(form)"> <!-- Create -->
+    <ion-list>
+      <ion-header>
+        <ion-label>Valid Form: {{form.valid}}</ion-label>
+      </ion-header>
+
+      <ion-item>
+        <ion-label position="floating">Name:</ion-label>
+        <ion-input type="text" placeholder="Name" required="true" name="name" [(ngModel)]="user.name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input type="email" placeholder="Email" required="true" name="email" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password:</ion-label>
+        <ion-input type="password" placeholder="Password" required="true" name="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+
+      <ion-button type="submit" expand="block" fill="clear" shape="round" [disabled]="form.invalid">
+        Submit
+      </ion-button>
+    </ion-list>
+  </form>
 </ion-content>
