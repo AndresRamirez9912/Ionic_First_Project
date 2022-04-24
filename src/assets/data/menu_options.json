@@ -63,5 +63,16 @@
     "icon": "refresh-circle-outline",
     "name": "Loading" ,
     "redirectTo": "/loading"
+  },
+  {
+    "icon": "alert-circle-outline",
+    "name": "Modal" ,
+    "redirectTo": "/modal"
+  },
+  {
+    "icon": "chatbox-outline",
+    "name": "Pop-over" ,
+    "redirectTo": "/popover"
   }
+
 ]

@@ -12,8 +12,7 @@
   <ion-list>
     <ion-item
       *ngFor="let component of components | async"
-      [routerLink]="component.redirectTo"
-      color="primary"
+      [routerLink]=component.redirectTo
       detail="true"
     >
     <ion-icon [name]="component.icon" slot="start"></ion-icon>
