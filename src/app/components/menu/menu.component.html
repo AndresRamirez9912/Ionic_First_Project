@@ -1,0 +1,19 @@
+<ion-menu contentId="main" menuId="main-menu" side="start" type="overlay">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-title>Menu Title</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle *ngFor="let element of menu_elements | async" [routerLink]=element.redirectTo> <!-- To do this I need to import the Routing module -->
+        <ion-item>
+          <ion-icon slot="start" [name]="element.icon" ></ion-icon>
+          <ion-label>{{ element.name }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
